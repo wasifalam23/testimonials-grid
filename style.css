@@ -1,0 +1,175 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	color: #ecf2f8;
+	background-color: #dfdfdf;
+	font-family: "Barlow Semi Condensed", sans-serif;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 7rem auto;
+	max-width: 90rem;
+	padding: 0 2rem;
+	line-height: 1.4;
+}
+
+.container {
+	grid-area: container;
+	justify-self: center;
+	align-self: center;
+	display: grid;
+	grid-gap: 2.2rem;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas:
+		"violet violet gray light-lg "
+		"violet violet gray light-lg"
+		"light-sm dark dark light-lg"
+		"light-sm dark dark light-lg";
+}
+
+.card {
+	border-radius: 0.8rem;
+	padding: 2rem 2.3rem 1.8rem 2.3rem;
+}
+
+.card-violet {
+	grid-area: violet;
+	background-color: #7541c8;
+	background-image: url("./images/bg-pattern-quotation.svg");
+	background-repeat: no-repeat;
+	background-position: 80% 0%;
+	background-size: 9rem;
+}
+
+.gray-border {
+	border: 2px solid #cfcfcf;
+}
+
+.violet-border {
+	border: 2px solid #7541c8;
+}
+
+.card-gray {
+	grid-area: gray;
+	background-color: #47556b;
+}
+
+.card-light {
+	grid-area: light-sm;
+	background-color: #ffffff;
+}
+
+.card-dark {
+	grid-area: dark;
+	background-color: #19212e;
+}
+
+.card-light-long {
+	grid-area: light-lg;
+	background-color: #ffffff;
+}
+
+.card-light,
+.card-light-long {
+	color: #111;
+}
+
+.card-header {
+	display: flex;
+	font-size: smaller;
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+	padding-left: 0;
+	margin-bottom: 0.8rem;
+}
+
+.card-header-info > h3 {
+	margin: 0;
+}
+
+.card-header-info > p {
+	margin: 0;
+	opacity: 50%;
+}
+
+.profile-pic {
+	width: 3.2rem;
+}
+
+.profile-pic {
+	border-radius: 100%;
+}
+
+.card-header-img {
+	margin: 0;
+}
+
+.card-body-title {
+	font-weight: 600;
+	font-size: 1.7rem;
+	margin-bottom: 1rem;
+}
+
+.margin-extra {
+	margin-bottom: 1.6rem;
+}
+
+.card-body-quote {
+	opacity: 70%;
+	font-size: 1.1rem;
+}
+
+.text-dark-blue {
+	color: #19212e;
+}
+
+.text-gray {
+	color: #47556b;
+}
+
+@media only screen and (max-width: 68em) {
+	.container {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+
+		grid-template-areas:
+			"violet violet gray gray"
+			"violet violet gray gray"
+			"light-sm light-sm dark dark"
+			"light-sm light-sm dark dark"
+			"light-lg light-lg light-lg light-lg";
+	}
+}
+
+@media only screen and (max-width: 40em) {
+	.container {
+		display: grid;
+		grid-gap: 1.5rem;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"violet"
+			"gray"
+			"light-sm"
+			"dark"
+			"light-lg";
+	}
+
+	.card-body-title {
+		font-size: 1.2;
+	}
+
+	.card-body-quote {
+		font-size: 1rem;
+	}
+
+	.card-violet {
+		background-size: 6rem;
+		background-position: 90% 0%;
+	}
+}
